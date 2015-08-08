@@ -1,0 +1,51 @@
+﻿@model IEnumerable<UBOnlineWebApiTest2.Models.Professor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.proName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proOffice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.proName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.proEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.proPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.proOffice)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.proName }) |
+            @Html.ActionLink("Details", "Details", new { id=item.proName }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.proName })
+        </td>
+    </tr>
+}
+
+</table>

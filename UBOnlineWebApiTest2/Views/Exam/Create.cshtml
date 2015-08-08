@@ -1,0 +1,83 @@
+﻿@model UBOnlineWebApiTest2.Models.UBOnlineExam
+
+<br>
+
+@{
+    ViewBag.Title = "UB Online Exam";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>UBOnlineExams</legend>
+        
+        <h3>@Model.questionTitle</h3>
+        <div>@Model.questionContent</div>
+        <table>
+            <tr>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.A)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.A)
+                        @Html.ValidationMessageFor(model => model.A)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.B)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.B)
+                        @Html.ValidationMessageFor(model => model.B)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.C)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.C)
+                        @Html.ValidationMessageFor(model => model.C)
+                    </div>
+                </td>
+                <td>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.D)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.D)
+                        @Html.ValidationMessageFor(model => model.D)
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="editor-label">
+@*            @Html.s
+            @Model.titleId = new string();
+            @Model.titleId = GenerateID();*@
+            @Html.LabelFor(model => model.comments)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.comments)
+            @Html.ValidationMessageFor(model => model.comments)
+        </div>
+
+        <p>
+            <input type="submit" value="Submit" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("View Your Answers", "Index")
+</div>
+<br>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

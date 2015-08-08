@@ -1,0 +1,60 @@
+﻿@model UBOnlineWebApiTest2.Models.Professor
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Professor</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.proName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.proName)
+            @Html.ValidationMessageFor(model => model.proName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.proEmail)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.proEmail)
+            @Html.ValidationMessageFor(model => model.proEmail)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.proPhone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.proPhone)
+            @Html.ValidationMessageFor(model => model.proPhone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.proOffice)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.proOffice)
+            @Html.ValidationMessageFor(model => model.proOffice)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

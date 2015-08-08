@@ -1,0 +1,43 @@
+﻿@model UBOnlineWebApiTest2.Models.Register
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Register</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.stuName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.stuName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.courseId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.courseId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.taken)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.taken)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.finalGrade)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.finalGrade)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.regId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

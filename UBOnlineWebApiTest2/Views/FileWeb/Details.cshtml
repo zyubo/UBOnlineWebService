@@ -1,0 +1,50 @@
+﻿@model UBOnlineWebApiTest2.Models.File
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>File</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fileId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fileId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fileName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fileName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.courseId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.courseId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fileType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fileType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fileLink)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fileLink)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.fileId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

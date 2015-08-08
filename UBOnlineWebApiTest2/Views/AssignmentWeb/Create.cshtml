@@ -1,0 +1,68 @@
+﻿@model UBOnlineWebApiTest2.Models.Assignment
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Assignment</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.courseId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.courseId)
+            @Html.ValidationMessageFor(model => model.courseId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fileId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.fileId)
+            @Html.ValidationMessageFor(model => model.fileId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.stuName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.stuName)
+            @Html.ValidationMessageFor(model => model.stuName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.submitted)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.submitted)
+            @Html.ValidationMessageFor(model => model.submitted)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.grade)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.grade)
+            @Html.ValidationMessageFor(model => model.grade)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

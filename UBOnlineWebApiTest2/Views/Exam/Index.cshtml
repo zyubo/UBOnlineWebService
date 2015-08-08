@@ -1,0 +1,66 @@
+﻿@model IEnumerable<UBOnlineWebApiTest2.Models.UBOnlineExam>
+
+<br>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Your Answers</h2>
+
+<p>
+    @Html.ActionLink("New Exam", "Create", new { id = 1 })
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.A)
+            &nbsp;&nbsp;
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B)
+            &nbsp;&nbsp;
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C)
+            &nbsp;&nbsp;
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.D)
+            &nbsp;&nbsp;
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comments)
+            &nbsp;&nbsp;
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.A)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.D)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comments)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.titleId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.titleId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.titleId })
+        </td>
+    </tr>
+}
+
+</table>
+<br>
+<br>

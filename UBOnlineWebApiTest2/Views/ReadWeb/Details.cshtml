@@ -1,0 +1,36 @@
+﻿@model UBOnlineWebApiTest2.Models.Read
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Read</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.annId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.annId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.stuName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.stuName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.read)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.read)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.readId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

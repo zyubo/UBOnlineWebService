@@ -1,0 +1,68 @@
+﻿@model UBOnlineWebApiTest2.Models.File
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>File</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fileId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.fileId)
+            @Html.ValidationMessageFor(model => model.fileId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fileName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.fileName)
+            @Html.ValidationMessageFor(model => model.fileName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.courseId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.courseId)
+            @Html.ValidationMessageFor(model => model.courseId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fileType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.fileType)
+            @Html.ValidationMessageFor(model => model.fileType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fileLink)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.fileLink)
+            @Html.ValidationMessageFor(model => model.fileLink)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

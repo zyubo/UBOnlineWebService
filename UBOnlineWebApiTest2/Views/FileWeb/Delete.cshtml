@@ -1,0 +1,54 @@
+﻿@model UBOnlineWebApiTest2.Models.File
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>File</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fileId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fileId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fileName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fileName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.courseId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.courseId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fileType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fileType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fileLink)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fileLink)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

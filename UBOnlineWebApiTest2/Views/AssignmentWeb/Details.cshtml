@@ -1,0 +1,50 @@
+﻿@model UBOnlineWebApiTest2.Models.Assignment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Assignment</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.courseId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.courseId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fileId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fileId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.stuName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.stuName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.submitted)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.submitted)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.grade)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.grade)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.asmId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

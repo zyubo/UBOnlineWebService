@@ -1,0 +1,29 @@
+﻿@model UBOnlineWebApiTest2.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Student</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.stuName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.stuName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.password)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.password)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.stuName }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,60 @@
+﻿@model UBOnlineWebApiTest2.Models.UBOnlineExam
+
+<br>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>UBOnlineExams</legend>
+        <table>
+            <tr>
+                <td>
+                    <div class="display-label">
+                         @Html.DisplayNameFor(model => model.A)
+                    </div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.A)
+                    </div>
+                </td>
+                <td>
+                    <div class="display-label">
+                         @Html.DisplayNameFor(model => model.B)
+                    </div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.B)
+                    </div>
+                </td>
+                <td>
+                    <div class="display-label">
+                         @Html.DisplayNameFor(model => model.C)
+                    </div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.C)
+                    </div>
+                </td>
+                <td>
+                    <div class="display-label">
+                         @Html.DisplayNameFor(model => model.D)
+                    </div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.D)
+                    </div>
+                </td>
+            </tr>
+        </table>
+    @*<div class="display-label">
+         @Html.DisplayNameFor(model => model.comments)
+    </div>*@
+    <div class="display-field">
+        @Html.DisplayFor(model => model.comments)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.titleId }) |
+    @Html.ActionLink("View Your Answers", "Index")
+</p>
+<br>
